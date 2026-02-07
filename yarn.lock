@@ -7668,7 +7668,7 @@ graphemer@^1.4.0:
   resolved "https://registry.yarnpkg.com/graphemer/-/graphemer-1.4.0.tgz#fb2f1d55e0e3a1849aeffc90c4fa0dd53a0e66c6"
   integrity sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==
 
-graphql-compose@^9.0.10, graphql-compose@^9.0.7:
+graphql-compose@9.1.0, graphql-compose@^9.0.10, graphql-compose@^9.0.7:
   version "9.1.0"
   resolved "https://registry.yarnpkg.com/graphql-compose/-/graphql-compose-9.1.0.tgz#6e12a5f193125f179441b8410bcf1aca0296946d"
   integrity sha512-nFL2+oeF8IlKjXPzmFL9rlBhrHlJMKGC0JeuBfOkWLLNqAtlFV+M1YGuuORyx0+mbLsBl9XToKWBPPfCHL8HHA==
