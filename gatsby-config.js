@@ -8,40 +8,50 @@ module.exports = {
     issue: {
       full: "The Beggars Opera",
       short: "1st Edition",
-      path: "path"
+      path: "/"
     },
-    doi: '10.55520/FAKE',
+    doi: '10.55520/6ZH06EW2',
     group_order: 1,
     title,
     htmlTitle,
-    description: `A Scholarly Edition of. ${title}. Edited by Steve Newman, Fred Rowland, Alex Wermer-Colan.`,
+    description: `A Scholarly Edition of ${title}. Edited by Steve Newman, Fred Rowland, and Alex Wermer-Colan.`,
     authors: [
       {
-        "first": "Henry",
-        "middle": "A",
+        "first": "Steve",
+        "last": "Newman",
+        "affiliations": [
+          "Temple University"
+        ]
+      },
+      {
+        "first": "Fred",
+        "last": "Rowland",
+        "affiliations": [
+          "Temple University"
+        ]
+      },
+      {
+        "first": "Alex",
         "last": "Wermer-Colan",
         "affiliations": [
           "Temple University"
         ],
-        orcid:"0000-0000-0000-0000"
+        "middle": "",
+        "orcid": ""
       }
     ],
-    repository: "https://gitlab.com/scholarly-editing/se-microedition-template",
+    repository: "https://github.com/Hawc2/gatsby_bo",
     menuLinks: [
       {
-        name: 'introduction',
+        name: 'Introduction',
         link: '/'
       },
       {
-        name: 'background',
+        name: 'Background',
         link: '/background'
       },
       {
-        name: 'edition',
-        link: '/example'
-      },
-      {
-        name: 'beggarsopera',
+        name: "Beggar's Opera",
         link: '/embedSVG_bo1'
       },
     ]

@@ -21,11 +21,8 @@ tei-byline {
     text-align: center;
 }
 
-td {
-
-    width: 33em;
+td, tei-cell {
     text-align: left;
-
 }
 
 
@@ -61,29 +58,32 @@ tei-div1[type = introduction] > tei-head {
 
 tei-div1[type = act] > tei-head {
     display: block;
-    font-size: 140%;
+    font-size: 150%;
     font-weight: bold;
-    padding-top: 3em;
+    padding-top: 2.5em;
     padding-bottom: 1em;
     text-align: center;
-
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 
 tei-div2[type = scene] > tei-head {
     display: block;
-    font-size: 140%;
+    font-size: 130%;
     font-weight: bold;
     text-align: left;
-    padding-top: 1em;
-    padding-bottom: 1em;
-
+    padding-top: 1.5em;
+    padding-bottom: 0.75em;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1em;
 }
 
 
 tei-div1[type = act] {
-    border-bottom: 1px solid #999;
-    padding-bottom: 1em;
+    border-bottom: 2px solid #999;
+    padding-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 
@@ -94,8 +94,81 @@ tei-div1[type = introduction] {
 
 
 tei-div1[type = dramatis] {
-    border-bottom: 1px solid #999;
+    border-bottom: 2px solid #999;
+    padding-bottom: 2em;
+    margin-bottom: 1em;
+}
+
+tei-div1[type = dramatis] > tei-head {
+    display: block;
+    font-size: 150%;
+    font-weight: bold;
+    padding-top: 2em;
     padding-bottom: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+tei-table {
+    display: block;
+    width: 100%;
+    margin: 1em auto;
+}
+
+tei-row {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0.15em 0;
+}
+
+tei-cell {
+    display: block;
+    padding: 0.2em 0.5em;
+}
+
+/* Character name column: right-align so the nbsp padding gets clipped on the left */
+tei-cell:first-child {
+    flex: 1;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 1em;
+}
+
+/* Hide empty middle cells */
+tei-cell:empty {
+    display: none;
+    flex: 0;
+    padding: 0;
+}
+
+/* Actor name column */
+tei-cell:last-child {
+    flex: 1;
+    text-align: left;
+}
+
+/* Section headers (MEN., WOMEN., subgroups) - cells with cols attribute span full width */
+tei-cell[cols] {
+    flex-basis: 100%;
+    text-align: center;
+    white-space: normal;
+    overflow: visible;
+}
+
+tei-cell[role = label] {
+    font-weight: bold;
+    font-size: 1.15em;
+    padding-top: 1.25em;
+    padding-bottom: 0.25em;
+}
+
+/* Subgroup headers like "Macheath's Gang" and "Women of the Town" */
+tei-cell[cols]:not([role = label]) {
+    font-size: 0.95em;
+    padding-top: 0.75em;
+    padding-bottom: 0.25em;
 }
 
 
@@ -167,7 +240,8 @@ tei-hi[rend = bold] {
 tei-l {
     display: block;
     font-style: italic;
-
+    line-height: 1.6;
+    padding-left: 2em;
 }
 
 tei-list[type = simple] {
@@ -179,13 +253,11 @@ tei-list[type = simple] > tei-item {
 }
 
 tei-p {
-
-    display: inline;
+    display: block;
     line-height: 1.8;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     text-align: justify;
-    padding-bottom: 1em;
 }
 
 
@@ -197,20 +269,26 @@ tei-set {
 
 tei-sp {
     display: block;
-    padding-bottom: 1em;
-
-
+    margin-bottom: 1.25em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #eee;
 }
 
 tei-speaker {
-    display: inline;
+    display: block;
     font-weight: bold;
-
+    font-variant: small-caps;
+    font-size: 1.05em;
+    margin-bottom: 0.25em;
 }
 
 tei-stage {
     display: block;
-    padding-bottom: 1em;
+    font-style: italic;
+    color: #555;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+    padding-left: 1.5em;
 }
 
 
@@ -224,16 +302,20 @@ tei-tei {
 }
 tei-text {
     display: block;
-    width: 30em;
+    width: 100%;
     margin: auto;
-    padding: 1em;
-    border-style: solid;
-    background-color: #f2f2f2;
+    padding: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fafafa;
 }
 
 tei-titlepage {
     display: block;
-
+    text-align: center;
+    padding: 2em 0;
+    margin-bottom: 2em;
+    border-bottom: 2px solid #999;
 }
 
 
@@ -245,21 +327,19 @@ tei-titlepage {
 
     tei-text {
         display: block;
-        width: auto;
+        width: 100%;
         margin: auto;
         padding: 1em;
-        border-style: solid;
-        background-color: #f2f2f2;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #fafafa;
     }
 
     tei-table {
         display: block;
-        margin-top: 2em;
-        margin-bottom: 2em;
-        font-size: .35em;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: .7em;
         width: 100%;
     }
 
@@ -348,27 +428,22 @@ tei-titlepage {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width : 600px) {
 
-
-
-
     tei-text {
         display: block;
-        width: auto;
+        width: 100%;
         margin: auto;
-        padding: 1em;
-        border-style: solid;
-        background-color: #f2f2f2;
+        padding: 1.5em;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #fafafa;
     }
 
 
     tei-table {
         display: block;
-        margin-top: 2em;
-        margin-bottom: 2em;
-        font-size: .75em;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: .85em;
         width: 100%;
     }
 
@@ -456,21 +531,19 @@ tei-titlepage {
 
     tei-text {
         display: block;
-        width: 70%;
+        width: 100%;
         margin: auto;
         padding: 2em;
-        border-style: solid;
-        background-color: #f2f2f2;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #fafafa;
     }
 
     tei-table {
         display: block;
-        margin-top: 2em;
-        margin-bottom: 2em;
-        font-size: .9em;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 1em;
         width: 100%;
     }
 
@@ -573,21 +646,19 @@ tei-titlepage {
 
  tei-text {
         display: block;
-        width: 50%;
+        width: 100%;
         margin: auto;
         padding: 2em;
-        border-style: solid;
-        background-color: #f2f2f2;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #fafafa;
     }
 
     tei-table {
         display: block;
-        margin-top: 2em;
-        margin-bottom: 2em;
-        font-size: .9em;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 1em;
         width: 100%;
     }
 
