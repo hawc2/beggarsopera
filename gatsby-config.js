@@ -76,10 +76,6 @@ module.exports = {
         link: "/ceteicean"
       },
       {
-        name: "CeTEIcean/TEI-Boilerplate",
-        link: "/ceteicean-tei-boilerplate"
-      },
-      {
         name: "TEI Boilerplate",
         link: "/teibp/tei/BeggarsOpera.xml"
       }

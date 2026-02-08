@@ -91,14 +91,15 @@ const facs: Fac[] = queryData.facs.nodes
           </label>
         </div>
       )}
-      <Container
-        component="main"
-        maxWidth={isMerged ? false : "md"}
-        disableGutters={!!isMerged}
-        className={isMerged ? `merged-tei${!showPageBreaks ? " hide-pb" : ""}` : undefined}
-      >
-        <Ceteicean pageContext={pageContext} routes={routes} />
-      </Container>
+      {isMerged ? (
+        <div className={`merged-tei-wrapper${!showPageBreaks ? " hide-pb" : ""}`}>
+          <Ceteicean pageContext={pageContext} routes={routes} />
+        </div>
+      ) : (
+        <Container component="main" maxWidth="md">
+          <Ceteicean pageContext={pageContext} routes={routes} />
+        </Container>
+      )}
       {isMerged && (
         <style>{`
           .teibp-toolbar {
@@ -106,21 +107,24 @@ const facs: Fac[] = queryData.facs.nodes
             gap: 16px;
             align-items: center;
             padding: 8px 0;
-            font-size: 0.9rem;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding-left: 24px;
+            padding-right: 24px;
           }
           .teibp-toolbar label {
             display: inline-flex;
             gap: 8px;
             align-items: center;
           }
-          .merged-tei {
+          .merged-tei-wrapper {
             max-width: 1600px;
             width: 100%;
             margin: 0 auto;
             padding: 0 24px;
           }
-          .merged-tei.hide-pb tei-pb,
-          .merged-tei.hide-pb .-teibp-pb {
+          .merged-tei-wrapper.hide-pb tei-pb,
+          .merged-tei-wrapper.hide-pb .-teibp-pb {
             display: none;
           }
         `}</style>

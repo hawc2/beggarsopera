@@ -56,7 +56,7 @@ const Layout = ({ location, children, wideHeader }: Props) => {
   const {repository, title, menuLinks, doi, issue} = data.site.siteMetadata
 
   let footer = <Footer repository={repository}/>
-  if (location === "example" || location === "ceteicean" || location === "ceteicean-tei-boilerplate") {
+  if (location === "example" || location === "ceteicean") {
     footer = <EditionFooter repository={repository}>{footer}</EditionFooter>
   }
 

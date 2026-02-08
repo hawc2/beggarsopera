@@ -2,24 +2,9 @@
 
 /* ===== Page Layout & Typography ===== */
 
-html {
-  margin: 0;
-  padding: 2.5em;
-  font-family: "Gentium Book Basic", Cochin, Georgia, serif;
-  font-size: 14pt;
-  line-height: 1.6;
-  background-color: #faf9f6;
-  color: #292929;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-body {
-  font-family: Georgia, "Gentium Book Basic", Cochin, serif;
-  background-color: #faf9f6;
-  margin: 20px auto;
-}
+/* Note: html and body styles removed to prevent conflicts with Gatsby/MUI layout.
+   These styles are only appropriate for standalone TEI Boilerplate pages.
+   The merged TEI view uses the Gatsby Container component for width control. */
 
 a:link, a:visited, a:active {
   color: #006699;
