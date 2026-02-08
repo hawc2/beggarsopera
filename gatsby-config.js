@@ -10,54 +10,79 @@ module.exports = {
       short: "1st Edition",
       path: "/"
     },
-    doi: '10.55520/6ZH06EW2',
+    doi: "10.55520/6ZH06EW2",
     group_order: 1,
     title,
     htmlTitle,
-    description: `A scholarly edition of ${title}, edited by Steve Newman, Fred Rowland, and Alex Wermer-Colan.`,
+    subtitle: "",
     authors: [
       {
-        "first": "Steve",
-        "last": "Newman",
-        "affiliations": [
-          "Temple University"
-        ]
+        first: "Steve",
+        middle: "",
+        last: "Newman",
+        affiliations: ["Temple University"],
+        orcid: ""
       },
       {
-        "first": "Fred",
-        "last": "Rowland",
-        "affiliations": [
-          "Temple University"
-        ]
+        first: "Fred",
+        middle: "",
+        last: "Rowland",
+        affiliations: ["Temple University"],
+        orcid: ""
       },
       {
-        "first": "Alex",
-        "last": "Wermer-Colan",
-        "affiliations": [
-          "Temple University"
-        ],
-        "middle": "",
-        "orcid": ""
+        first: "Alex",
+        middle: "",
+        last: "Wermer-Colan",
+        affiliations: ["Temple University"],
+        orcid: ""
+      }
+    ],
+    authors_struct: [
+      {
+        first: "Steve",
+        middle: "",
+        last: "Newman",
+        affiliations: ["Temple University"],
+        orcid: ""
+      },
+      {
+        first: "Fred",
+        middle: "",
+        last: "Rowland",
+        affiliations: ["Temple University"],
+        orcid: ""
+      },
+      {
+        first: "Alex",
+        middle: "",
+        last: "Wermer-Colan",
+        affiliations: ["Temple University"],
+        orcid: ""
       }
     ],
     repository: "https://github.com/hawc2/beggarsopera",
     menuLinks: [
       {
-        name: 'Introduction',
-        link: '/'
+        name: "Introduction",
+        link: "/"
       },
       {
-        name: 'Background',
-        link: '/background'
+        name: "Background",
+        link: "/background"
       },
       {
-        name: "Beggar's Opera",
-        link: '/embedSVG_bo1'
+        name: "CeTEIcean",
+        link: "/ceteicean"
       },
       {
-        name: 'TEI Boilerplate',
-        link: '/teibp/tei/BeggarsOpera.xml'
+        name: "CeTEIcean/TEI-Boilerplate",
+        link: "/ceteicean-tei-boilerplate"
       },
+      {
+        name: "TEI Boilerplate",
+        link: "/teibp/tei/BeggarsOpera.xml"
+      }
     ]
   },
   plugins: [

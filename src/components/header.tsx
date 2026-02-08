@@ -21,6 +21,7 @@ interface Props {
   siteTitle: string
   menuLinks: Links[]
   doi: string
+  wideHeader?: boolean
   issue: {
     short: string
     path: string
@@ -66,10 +67,10 @@ const LogoBkgr = styled.span(() => ({
 
 // Main Component
 
-const Header = ({ location, menuLinks, doi, issue }: Props) => (
+const Header = ({ location, menuLinks, doi, issue, wideHeader }: Props) => (
     <Wrapper>
       <Banner>
-        <Container maxWidth="md">
+        <Container maxWidth={wideHeader ? false : "md"} disableGutters={!!wideHeader}>
           <Logo>
             <Link to={withPrefix("/")}>
               <LogoBkgr />
@@ -78,8 +79,8 @@ const Header = ({ location, menuLinks, doi, issue }: Props) => (
           </Logo>
         </Container>
       </Banner>
-      <Info doi={doi} issue={issue}/>
-      <Nav location={location} menuLinks={menuLinks} />
+      <Info doi={doi} issue={issue} wideHeader={wideHeader} />
+      <Nav location={location} menuLinks={menuLinks} wideHeader={wideHeader} />
     </Wrapper>
 )
 

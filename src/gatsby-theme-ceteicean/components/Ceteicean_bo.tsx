@@ -51,7 +51,7 @@ const facs: Fac[] = queryData.facs.nodes
   }
 
   return(
-    <Layout location="embedSVG_bo1">
+    <Layout location={pageContext.name}>
       <SEO title="The Beggar's Opera" />
       <Container component="main" maxWidth="md">
         <Ceteicean pageContext={pageContext} routes={routes} />

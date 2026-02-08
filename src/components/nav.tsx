@@ -14,6 +14,7 @@ interface Links {
 interface Props {
   location: string
   menuLinks: Links[]
+  wideHeader?: boolean
 }
 
 const styles = {
@@ -34,11 +35,11 @@ const styles = {
   },
 }
 
-const Layout = ({ location, menuLinks }: Props) => {
+const Layout = ({ location, menuLinks, wideHeader }: Props) => {
   const isHome = location === "intro"
 
   return (
-    <Container maxWidth="md" sx={styles.nav}>
+    <Container maxWidth={wideHeader ? false : "md"} disableGutters={!!wideHeader} sx={styles.nav}>
       <Grid container={true} component="nav">
         {menuLinks.map(link => {
           const isStaticLink = link.link.endsWith(".xml") || link.link.startsWith("/teibp/")

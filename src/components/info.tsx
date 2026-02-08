@@ -15,6 +15,7 @@ interface Props {
     path: string
   }
   doi: string
+  wideHeader?: boolean
 }
 
 const Wrapper = styled.div(() => ({
@@ -48,9 +49,9 @@ const styles = {
   }
 }
 
-const Info = ({doi, issue}: Props) => (
+const Info = ({doi, issue, wideHeader}: Props) => (
   <Wrapper>
-    <Container maxWidth="md">
+    <Container maxWidth={wideHeader ? false : "md"} disableGutters={!!wideHeader}>
       <Grid container={true}>
         <Grid item={true} xs={4}>
           <Button
