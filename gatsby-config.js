@@ -1,6 +1,6 @@
 const basePath = "beggarsopera"
-const title = "The Beggars Opera"
-const htmlTitle = "The Beggars Opera"
+const title = "The Beggar's Opera"
+const htmlTitle = "The Beggar's Opera"
 
 module.exports = {
   pathPrefix: basePath,
@@ -14,7 +14,7 @@ module.exports = {
     group_order: 1,
     title,
     htmlTitle,
-    description: `A Scholarly Edition of ${title}. Edited by Steve Newman, Fred Rowland, and Alex Wermer-Colan.`,
+    description: `A scholarly edition of ${title}, edited by Steve Newman, Fred Rowland, and Alex Wermer-Colan.`,
     authors: [
       {
         "first": "Steve",

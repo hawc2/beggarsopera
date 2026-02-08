@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import { Link, withPrefix } from "gatsby"
 import React from "react"
 import Container from "@mui/material/Container"
 
@@ -71,7 +71,7 @@ const Header = ({ location, menuLinks, doi, issue }: Props) => (
       <Banner>
         <Container maxWidth="md">
           <Logo>
-            <Link to="/">
+            <Link to={withPrefix("/")}>
               <LogoBkgr />
               <img src={titleImg} alt="Scholarly Editing Logo" width={200} />
             </Link>
