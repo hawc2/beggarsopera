@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://vault.tei-c.org/P5/current/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://vault.tei-c.org/P5/current/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-stylesheet type="text/xsl" href="teibp.xsl"?>
+<!DOCTYPE play [
+    <!ENTITY nbsp "&#160;">
+    <!ENTITY hyphen "&#8208;"> ]>
 <!--MEI/TEI header added, as per Marcus Bingenheimer 7-1-20-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:mei="http://www.music-encoding.org/ns/mei">
     <teiHeader>
@@ -68,7 +73,70 @@ two hyphens.</p>
 <p>Page numbers appear at the beginning of each page, no matter where originally placed.</p>
 </normalization>-->
             </editorialDecl>
-            <tagsDecl> </tagsDecl>
+            <tagsDecl>
+                <!-- Basic text formatting: bold, italic, underline, "normal," etc. -->
+                <rendition xml:id="bold" scheme="css"> font-weight: bold; </rendition>
+
+                <rendition xml:id="speaker" scheme="css"> font-style: italic; </rendition>
+
+
+                <!-- Blocks. -->
+                <!-- "codeblock" for arias -->
+
+                <rendition xml:id="codeblock" scheme="css"> display: block; font-size: 120%;
+                    margin-left: 4em; padding-left: 1em; margin-top:
+                    .75em; margin-bottom: .75em; padding-top: .75em; padding-bottom: 1.5em;
+                    font-family: "Gentium Book Basic", Cochin, Georgia, Serif; text-align: left; line-height: 2.0; </rendition>
+
+
+
+                <!-- "codeblock-tp" for blocks on title page -->
+
+                <rendition xml:id="codeblock-tp" scheme="css"> display:block; margin-left:auto;
+                    margin-right:auto; padding-top: 25px; padding-bottom: 25px; line-height:
+                    200%</rendition>
+
+                <!-- "codeblock-bl" to create line breaks using display: block; -->
+
+                <rendition xml:id="codeblock-bl" scheme="css">display: block; </rendition>
+
+
+
+                <!-- Tables. -->
+                <rendition xml:id="heading" scheme="css"> text-align: center; </rendition>
+
+
+
+                <!-- Spaces. -->
+
+
+
+                <!-- Inline -->
+
+
+                <!-- Alignment. -->
+
+
+                <rendition xml:id="center" scheme="css"> display:block; text-align:center;
+                    margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 75px;
+                    border-bottom: 1px solid #999; </rendition>
+
+
+
+                <!-- Indentation -->
+
+
+                <!-- Indentation for verse lines. Results in a "hanging" indent if
+					the line wraps. -->
+
+
+                <!-- font sizes -->
+
+                <rendition xml:id="xxx-large" scheme="css"> font-size:155%; </rendition>
+
+                <rendition xml:id="small" n="teibp:small" scheme="css"> font-size:90%; </rendition>
+
+            </tagsDecl>
             <schemaSpec ident="tei_drama" start="TEI teiCorpus">
                 <!-- get required modules -->
                 <moduleRef key="header"/>
