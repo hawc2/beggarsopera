@@ -93,7 +93,8 @@ const facs: Fac[] = queryData.facs.nodes
       )}
       <Container
         component="main"
-        maxWidth={isMerged ? "xl" : "md"}
+        maxWidth={isMerged ? false : "md"}
+        disableGutters={!!isMerged}
         className={isMerged ? `merged-tei${!showPageBreaks ? " hide-pb" : ""}` : undefined}
       >
         <Ceteicean pageContext={pageContext} routes={routes} />
@@ -113,8 +114,10 @@ const facs: Fac[] = queryData.facs.nodes
             align-items: center;
           }
           .merged-tei {
-            max-width: 1200px;
+            max-width: 1600px;
             width: 100%;
+            margin: 0 auto;
+            padding: 0 24px;
           }
           .merged-tei.hide-pb tei-pb,
           .merged-tei.hide-pb .-teibp-pb {
