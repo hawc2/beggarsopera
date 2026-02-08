@@ -1,4 +1,4 @@
-const basePath = "beggarsopera"
+const basePath = "beggars-opera"
 const title = "The Beggar's Opera"
 const htmlTitle = "The Beggar's Opera"
 
@@ -61,7 +61,7 @@ module.exports = {
         orcid: ""
       }
     ],
-    repository: "https://github.com/hawc2/beggarsopera",
+    repository: "https://github.com/hawc2/beggars-opera",
     menuLinks: [
       {
         name: "Introduction",
