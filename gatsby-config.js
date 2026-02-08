@@ -1,4 +1,4 @@
-const basePath = "gatsby_bo"
+const basePath = "beggars_opera"
 const title = "The Beggars Opera"
 const htmlTitle = "The Beggars Opera"
 
@@ -40,7 +40,7 @@ module.exports = {
         "orcid": ""
       }
     ],
-    repository: "https://github.com/Hawc2/gatsby_bo",
+    repository: "https://github.com/hawc2/beggars_opera",
     menuLinks: [
       {
         name: 'Introduction',
@@ -53,6 +53,10 @@ module.exports = {
       {
         name: "Beggar's Opera",
         link: '/embedSVG_bo1'
+      },
+      {
+        name: 'TEI Boilerplate',
+        link: '/teibp/tei/BeggarsOpera.xml'
       },
     ]
   },
