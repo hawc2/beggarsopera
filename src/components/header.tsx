@@ -2,7 +2,6 @@ import { Link, withPrefix } from "gatsby"
 import React from "react"
 import Container from "@mui/material/Container"
 
-import Info from "./info"
 import Nav from "./nav"
 
 import titleImg from "../images/se-title.png"
@@ -79,7 +78,6 @@ const Header = ({ location, menuLinks, doi, issue, wideHeader }: Props) => (
           </Logo>
         </Container>
       </Banner>
-      <Info doi={doi} issue={issue} wideHeader={wideHeader} />
       <Nav location={location} menuLinks={menuLinks} wideHeader={wideHeader} />
     </Wrapper>
 )

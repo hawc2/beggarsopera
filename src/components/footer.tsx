@@ -53,6 +53,9 @@ const Footer = ({repository} : Props) => (
             The open source code for this micro-edition is available at{" "}
             <a href={repository}>{repository}</a>.
           </p>
+          <p style={{margin: "0 0 0.5rem 0"}}>
+            This is a <strong>Micro-Edition</strong> published by Scholarly Editing.
+          </p>
           <p style={{margin: 0}}>
             © {new Date().getFullYear()} Scholarly Editing.
             {" "}ISSN 2167-1257 | DOI{" "}
