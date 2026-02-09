@@ -10,7 +10,6 @@ import Pb from "./Pb"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import Container from "@mui/material/Container"
-import "../../embedSVG_tei.css"
 
 interface Props {
   pageContext: {
