@@ -6,11 +6,7 @@ path: "/"
 
 The Beggar's Opera: A Site for Scholars, Performers, Teachers and Students breaks new ground by providing the first scholarly digital edition of the play and the first that makes substantial use of the multimedia functionalities of a digital environment, bringing the play alive both in its time and ours.
 
-## The Website
-
 **A new editorial approach:** This site offers the only accessible edition of The Beggar's Opera that integrates what scholars agree is the authoritative edition of the text (the first) and the music (the third), with some textual changes in the second and third that seem to have authorial warrant. Recent editions by Lewis (1973), Fuller (1983), and Gladfelder (2013), do not include the music, reasoning that it can be found elsewhere, as in Barlow's standard edition of the music only (1990). But this splits apart the essential twinning of text and music, word and song at the heart of the play. This edition also seeks to acknowledge recent challenges to authorial intent as the determining criterion by retaining inconsistencies in printing where there is no good reason to assume authorial intent, thereby acknowledging the contingencies of the publication process. More on the editorial principles behind this edition can be found here.
-
-**A realization of the resources of a digital environment:** Neither the print editions nor the Project Gutenberg (2008) edition enrich the experience of the text by providing audio and video clips as our site does; the Gutenberg Edition provides access to MIDI and PDF files that can be downloaded, but this does not provide the dynamic experience found on this site.
 
 ## Editorial Approach
 
