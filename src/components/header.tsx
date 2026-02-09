@@ -54,15 +54,7 @@ const Logo = styled.div(() => ({
   },
 }))
 
-const LogoBkgr = styled.span(() => ({
-  height: "109px",
-  position: "absolute",
-  backgroundColor: "#fff",
-  width: "200px",
-  top: "18px",
-  zIndex: -1,
-  filter: "opacity(.5)",
-}))
+// LogoBkgr removed - no longer needed without Info component
 
 // Main Component
 
@@ -72,7 +64,6 @@ const Header = ({ location, menuLinks, doi, issue, wideHeader }: Props) => (
         <Container maxWidth={wideHeader ? false : "md"} disableGutters={!!wideHeader}>
           <Logo>
             <Link to={withPrefix("/")}>
-              <LogoBkgr />
               <img src={titleImg} alt="Scholarly Editing Logo" width={200} />
             </Link>
           </Logo>

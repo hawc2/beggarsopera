@@ -27,7 +27,7 @@ const Footer = ({repository} : Props) => (
   <Box component="footer" sx={styles.footer}>
     <Container maxWidth="lg">
       <Grid container={true}>
-        <Grid item={true} xs={9}>
+        <Grid item={true} xs={12}>
           <p style={{margin: "0 0 0.5rem 0"}}>
             <a
               rel="license"
@@ -61,14 +61,6 @@ const Footer = ({repository} : Props) => (
             {" "}ISSN 2167-1257 | DOI{" "}
             <a href="https://doi.org/10.55520/6ZH06EW2">10.55520/6ZH06EW2</a>
           </p>
-        </Grid>
-        <Grid item={true} xs={3} sx={styles.logo}>
-          <a href="http://www.documentaryediting.org">
-            <img
-              src="https://scholarlyediting.reclaim.hosting/se-archive/template_images/adelogo.png"
-              alt="Logo of the Association for Documentary Editing"
-            />
-          </a>
         </Grid>
       </Grid>
     </Container>
