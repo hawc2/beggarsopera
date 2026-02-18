@@ -10,7 +10,6 @@ import Typography from "@mui/material/Typography"
 import theme from "../theme"
 import Layout from "../components/layout"
 import { graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 
 
 declare module '@mui/styles/defaultTheme' {
@@ -25,14 +24,6 @@ interface Props {
     html: string
   },
   location: string
-}
-
-interface Author {
-  first: string
-  middle?: string
-  last: string,
-  affiliations: string[]
-  orcid?: string
 }
 
 const useStyles = makeStyles({
@@ -56,7 +47,7 @@ const useStyles = makeStyles({
 })
 
 export default function Introduction({pageContext}: Props) {
-  const { site, orcid } = useStaticQuery(
+  const { site } = useStaticQuery(
     graphql`
       query {
         site {
@@ -83,18 +74,6 @@ export default function Introduction({pageContext}: Props) {
   )
 
   const classes = useStyles()
-
-  const authors = site.siteMetadata.authors.map((a: Author) => (
-    <React.Fragment key={a.last}>
-      {a.first}{a.middle ? ` ${a.middle}` : ''} {a.last}, {a.affiliations.join(', ')}
-      {a.orcid &&
-        <a href={`https://orcid.org/${a.orcid}`} className={classes.orcid}>
-          <GatsbyImage image={orcid.nodes[0].childImageSharp.gatsbyImageData} alt="ORCID logo"/>
-        </a>
-      }
-      <br/>
-    </React.Fragment>
-  ))
 
   return (
     <Layout location="intro">

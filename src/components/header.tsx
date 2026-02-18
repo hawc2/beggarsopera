@@ -58,7 +58,7 @@ const Logo = styled.div(() => ({
 
 // Main Component
 
-const Header = ({ location, menuLinks, doi, issue, wideHeader }: Props) => (
+const Header = ({ location, menuLinks, wideHeader }: Props) => (
     <Wrapper>
       <Banner>
         <Container maxWidth={wideHeader ? false : "md"} disableGutters={!!wideHeader}>

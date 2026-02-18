@@ -25,7 +25,7 @@ interface Props {
 }
 
 const EditionFooter = ({children, repository}: Props) => {
-  const footerRef = React.useRef<HTMLElement>(null)
+  const footerRef = React.useRef<HTMLDivElement>(null)
   const [stopFab, setStopFab] = React.useState(false)
 
   React.useEffect(() => {
@@ -47,7 +47,7 @@ const EditionFooter = ({children, repository}: Props) => {
 
   const [open, setOpen] = React.useState(false)
 
-  return (<div {...{ ref: footerRef } as any}>
+  return (<div ref={footerRef}>
     <Download open={open} close={() => setOpen(false)} repository={repository}/>
     <Fab size="large" color="secondary" aria-label="Show TEI" 
         sx={{
